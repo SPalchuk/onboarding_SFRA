@@ -1,11 +1,17 @@
 {
   "folders": [
-	{
-		"path": "..\\..\\..\\..\\..\\..\\..\\storefront-reference-architecture-master"
-	},
-	{
-		"path": "..\\..\\..\\..\\..\\.."
-	}
-],
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\storefront-reference-architecture-master"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\.."
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\lib_productlist"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\plugin_wishlists"
+		}
+	],
   "settings": {}
 }
