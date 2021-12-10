@@ -1,0 +1,20 @@
+{
+  "folders": [
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\storefront-reference-architecture-master"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\.."
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\lib_productlist"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\plugin_wishlists"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\plugin_giftregistry"
+		}
+	],
+  "settings": {}
+}
