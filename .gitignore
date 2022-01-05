@@ -1,3 +1,5 @@
 node_modules
 dist
 cartridges/sfra_training
+dw.json
+cartridges\app_onboarding\cartridge\models\search\attributeRefinementValue\workspace.code-workspace
