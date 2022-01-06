@@ -1,0 +1,27 @@
+<isif condition="${require('app_onboarding/cartridge/models/utils.js')()}">
+  <isset name="swatchClasses" value=${refinementValue.swatchId + " swatch-circle swatch-mark"}  scope="page" />
+  <isset name="colorNameAndCount" value=" " scope="page" />
+<iselse/>
+  <isset name="swatchClasses" value=" " scope="page" />
+  <isif condition="${refinementValue.hitCount>0}">
+    <isset name="colorNameAndCount" value=${refinementValue.displayValue + '('+ refinementValue.hitCount+')'} scope="page" />
+  <iselse/>
+    <isset name="colorNameAndCount" value=" " scope="page" />
+  </isif>
+</isif>
+
+
+<li class="color-attribute">
+  <button data-href="${refinementValue.url}">
+    <span class="  color-value  ${swatchClasses}
+      <isif condition=" ${refinementValue.selected && refinementValue.selectable}">selected</isif>
+      <isif condition="${!refinementValue.selectable}">disabled</isif>"
+      >
+      ${colorNameAndCount}
+    </span>
+    <span id="${refinementValue.swatchId}-assistive" class="sr-only selected-assistive-text">
+      ${refinementValue.selected && refinementValue.selectable ? Resource.msg('msg.assistive.selected.text', 'common', null) : ''}
+      ${refinementValue.title}
+    </span>
+  </button>
+</li>
