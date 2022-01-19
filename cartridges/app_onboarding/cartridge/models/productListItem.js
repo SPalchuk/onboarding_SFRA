@@ -13,12 +13,11 @@ module.exports = function productListItem(productListItemObject) {
     var creationDate = Date.parse(productListItemObject.creationDate)
     var gap = today - creationDate
     var timeToLeave = (timeToLeaveBase * 24 * 60 * 60 * 1000 - gap) / 1000 / 60 / 60 / 24
-    // if (Math.floor(timeToLeave) - 100 < 0) {
-    //     txn.wrap(function () {
-    //         productListItemObject.getList().removeItem(productListItemObject)
-    //     });
-    // } else {
-    //     this.productListItem.timeToLeave = Math.floor(timeToLeave)
-    // }
-    this.productListItem.timeToLeave = Math.floor(timeToLeave)
+    if (Math.floor(timeToLeave) - 100 < 0) {
+        txn.wrap(function () {
+            productListItemObject.getList().removeItem(productListItemObject)
+        });
+    } else {
+        this.productListItem.timeToLeave = Math.floor(timeToLeave)
+    }
 }
